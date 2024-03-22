@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:travel/constant.dart';
+import 'package:travel/widget/Text_login.dart';
+import 'package:travel/widget/login_icons_screen.dart';
+
 import 'package:travel/screens/homeScreen.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -29,35 +32,23 @@ class LoginScreen extends StatelessWidget {
                   SizedBox(
                     height: 400,
                   ),
-                  Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "NAVIGATE",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w800,
-                            fontSize: 30,
-                            color: const Color.fromARGB(255, 110, 106, 106)),
-                      )),
-                  Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "THE WORLED",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 30,
-                            color: const Color.fromARGB(255, 110, 106, 106)),
-                      )),
-                  Container(
-                      alignment: Alignment.center,
-                      child: Text(
-                        "let trip planner guide you",
-                        style: TextStyle(
-                            fontWeight: FontWeight.w500,
-                            fontSize: 10,
-                            color: const Color.fromARGB(255, 110, 106, 106)),
-                      )),
+                  Text_login(
+                    texxt: "NAVIGATE",
+                    textsize: 25,
+                    fontWeight1: FontWeight.w800,
+                  ),
+                  Text_login(
+                    texxt: "THE WORLED",
+                    textsize: 25,
+                    fontWeight1: FontWeight.w800,
+                  ),
+                  Text_login(
+                    texxt: "let trip planner guide you",
+                    textsize: 15,
+                    fontWeight1: FontWeight.w300,
+                  ),
                   SizedBox(
-                    height: 50,
+                    height: 56,
                   ),
                   Container(
                     width: 420,
@@ -97,24 +88,11 @@ class LoginScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.center,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            CircleAvatar(
-                                radius: 20,
-                                child: Image.asset(
-                                  fit: BoxFit.cover,
-                                  "images/facebook.png",
-                                )),
-                            CircleAvatar(
-                                radius: 20,
-                                child: Image.asset(
-                                  fit: BoxFit.cover,
-                                  "images/icons8-google-48.png",
-                                )),
-                            CircleAvatar(
-                                radius: 20,
-                                child: Image.asset(
-                                  fit: BoxFit.cover,
-                                  "images/icons8-apple-logo-30.png",
-                                )),
+                            login_icons_screen(immage: "images/facebook.png"),
+                            login_icons_screen(
+                                immage: "images/icons8-google-48.png"),
+                            login_icons_screen(
+                                immage: "images/icons8-apple-logo-30.png"),
                           ],
                         )
                       ],
